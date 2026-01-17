@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seite nicht gefunden - 404</title>
+    <meta name="description" content="Die angeforderte Seite konnte nicht gefunden werden. Bitte überprüfen Sie die URL oder kehren Sie zur Startseite zurück.">
+
+    <meta name="robots" content="noindex, nofollow">
+    <meta property="og:title" content="Seite nicht gefunden (404)">
+    <meta property="og:description" content="Die angeforderte Seite konnte nicht gefunden werden. Bitte überprüfen Sie die URL oder kehren Sie zur Startseite zurück.">
+    <meta property="og:image" content="https://sonnenspielecasino.de/images/404-og.jpg">
+    <meta property="og:url" content="https://sonnenspielecasino.de/404">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Seite nicht gefunden (404)">
+    <meta name="twitter:description" content="Die angeforderte Seite konnte nicht gefunden werden. Bitte überprüfen Sie die URL oder kehren Sie zur Startseite zurück.">
+    <meta name="twitter:image" content="https://sonnenspielecasino.de/images/404-twitter.jpg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Seite nicht gefunden (404)",
+        "url": "https://sonnenspielecasino.de/404",
+        "description": "Die angeforderte Seite konnte nicht gefunden werden.",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://sonnenspielecasino.de/"
+        }
+    }
+    </script>
+    <style>
+        /* RESET AND BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* FIXED CENTERED LAYOUT */
+        .page-wrapper {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* HEADER */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px 0;
+            width: 100%;
+            position: relative;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ff9800;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        /* MAIN CONTENT */
+        main {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .error-container {
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* 404 ANIMATION */
+        .error-animation {
+            position: relative;
+            margin: 0 auto 40px;
+            width: 300px;
+            height: 300px;
+        }
+
+        .error-number {
+            font-size: 12rem;
+            font-weight: 900;
+            color: #ff9800;
+            line-height: 1;
+            position: relative;
+            text-shadow: 5px 5px 0 rgba(255, 152, 0, 0.1);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .error-number::after {
+            content: "404";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            color: #ff5722;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .search-icon {
+            position: absolute;
+            font-size: 4rem;
+            animation: search 4s linear infinite;
+            opacity: 0.2;
+        }
+
+        .search-icon:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+        .search-icon:nth-child(2) { top: 60%; right: 15%; animation-delay: 1s; }
+        .search-icon:nth-child(3) { bottom: 30%; left: 20%; animation-delay: 2s; }
+
+        @keyframes search {
+            0% { transform: rotate(0deg) scale(1); opacity: 0.2; }
+            50% { transform: rotate(180deg) scale(1.2); opacity: 0.1; }
+            100% { transform: rotate(360deg) scale(1); opacity: 0.2; }
+        }
+
+        /* ERROR TEXT */
+        .error-title {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .error-subtitle {
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ACTION BUTTONS */
+        .action-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            min-width: 180px;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);
+            color: white;
+            box-shadow: 0 5px 20px rgba(255, 152, 0, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 152, 0, 0.4);
+            background: linear-gradient(135deg, #ff5722 0%, #ff9800 100%);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #333;
+            border-color: #ddd;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-color: #ff9800;
+            color: #ff9800;
+        }
+
+        .btn-icon {
+            font-size: 1.2rem;
+        }
+
+        /* SEARCH BOX */
+        .search-box {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            max-width: 600px;
+        }
+
+        .search-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .search-form {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 16px 20px;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            min-width: 0;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #ff9800;
+            box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.1);
+        }
+
+        .search-button {
+            background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 16px 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 120px;
+            white-space: nowrap;
+        }
+
+        .search-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+        }
+
+        /* POPULAR PAGES */
+        .popular-pages {
+            margin: 50px 0;
+            width: 100%;
+        }
+
+        .popular-title {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .pages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .page-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border-top: 5px solid #ff9800;
+            text-align: center;
+        }
+
+        .page-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            color: #ff9800;
+        }
+
+        .page-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #ff9800;
+        }
+
+        .page-name {
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .page-desc {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* TECHNICAL INFO */
+        .tech-info {
+            background: rgba(255, 152, 0, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 40px auto;
+            border-left: 5px solid #ff9800;
+            max-width: 800px;
+        }
+
+        .tech-title {
+            font-size: 1.3rem;
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .tech-list {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .tech-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .tech-list li::before {
+            content: "•";
+            color: #ff9800;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -3px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 40px 20px 20px;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ff9800;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #999;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        /* ERROR MESSAGE */
+        .error-message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #f44336;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(244, 67, 54, 0.3);
+            display: none;
+            z-index: 1000;
+            animation: slideIn 0.5s ease;
+            max-width: 300px;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 768px) {
+            .error-number {
+                font-size: 8rem;
+            }
+            
+            .error-animation {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .search-icon {
+                font-size: 2.5rem;
+            }
+            
+            .error-title {
+                font-size: 2rem;
+            }
+            
+            .error-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .search-form {
+                flex-direction: column;
+            }
+            
+            .search-button {
+                width: 100%;
+            }
+            
+            .pages-grid {
+                grid-template-columns: 1fr;
+                padding: 0 10px;
+            }
+            
+            .search-box {
+                padding: 20px;
+                margin: 30px 20px;
+            }
+            
+            .tech-info {
+                padding: 20px;
+                margin: 30px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .error-number {
+                font-size: 6rem;
+            }
+            
+            .error-animation {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .error-title {
+                font-size: 1.8rem;
+            }
+            
+            .error-subtitle {
+                font-size: 1rem;
+            }
+            
+            .search-box {
+                padding: 15px;
+                margin: 20px 15px;
+            }
+            
+            .page-card {
+                padding: 20px;
+            }
+        }
+
+        /* PRINT STYLES */
+        @media print {
+            .error-animation,
+            .search-box,
+            .action-buttons,
+            footer {
+                display: none;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .error-container {
+                padding: 0;
+            }
+            
+            .error-number {
+                color: black;
+            }
+        }
+
+        /* FIX FOR HORIZONTAL SCROLL */
+        body * {
+            max-width: 100%;
+        }
+
+        img, table, td, blockquote, code, pre, textarea, input, select, button {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <header>
+            <div class="header-content">
+                <a href="/" class="logo">Sonnenspiele Casino</a>
+            </div>
+        </header>
+
+        <main>
+            <div class="error-container">
+                <!-- Animated 404 Number -->
+                <div class="error-animation">
+                    <div class="error-number">404</div>
+                    <div class="search-icon">🔍</div>
+                    <div class="search-icon">🔍</div>
+                    <div class="search-icon">🔍</div>
+                </div>
+                
+                <!-- Error Message -->
+                <h1 class="error-title">Oops! Seite nicht gefunden</h1>
+                <p class="error-subtitle">
+                    Die von Ihnen gesuchte Seite existiert nicht oder wurde verschoben. 
+                    Möglicherweise haben Sie einen falschen Link eingegeben oder die Seite wurde gelöscht.
+                </p>
+                
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <a href="/" class="btn btn-primary">
+                        <span class="btn-icon">🏠</span>
+                        Zur Startseite
+                    </a>
+                    <a href="/kontakt" class="btn btn-secondary">
+                        <span class="btn-icon">📧</span>
+                        Kontakt aufnehmen
+                    </a>
+                </div>
+                
+                <!-- Search Box -->
+                <div class="search-box">
+                    <h3 class="search-title">Suchen Sie nach etwas Bestimmtem?</h3>
+                    <form class="search-form" id="siteSearch">
+                        <input type="text" 
+                               class="search-input" 
+                               placeholder="Casino-Boni, Spiele, Erfahrungen..." 
+                               id="searchQuery"
+                               autocomplete="off">
+                        <button type="submit" class="search-button">Suchen</button>
+                    </form>
+                    <p style="margin-top: 15px; color: #666; font-size: 0.9rem; text-align: center;">
+                        Tipp: Probieren Sie "Bonus ohne Einzahlung", "Sonnenspiele Login" oder "Live Casino"
+                    </p>
+                </div>
+                
+                <!-- Popular Pages -->
+                <div class="popular-pages">
+                    <h3 class="popular-title">Beliebte Seiten auf unserer Website</h3>
+                    <div class="pages-grid">
+                        <a href="#" class="page-card">
+                            <div class="page-icon">🎁</div>
+                            <div class="page-name">Bonus ohne Einzahlung</div>
+                            <div class="page-desc">Aktuelle Freispiele und Startguthaben ohne Einzahlung</div>
+                        </a>
+                        
+                        <a href="#" class="page-card">
+                            <div class="page-icon">💰</div>
+                            <div class="page-name">5 Euro Bonus</div>
+                            <div class="page-desc">Casinos mit kleinen Mindesteinzahlungen</div>
+                        </a>
+                        
+                        <a href="#" class="page-card">
+                            <div class="page-icon">🎰</div>
+                            <div class="page-name">Spiele Übersicht</div>
+                            <div class="page-desc">Slots, Tischspiele und Live Casino</div>
+                        </a>
+                        
+                        <a href="#" class="page-card">
+                            <div class="page-icon">⭐</div>
+                            <div class="page-name">Casino Erfahrungen</div>
+                            <div class="page-desc">Echte Bewertungen und Tests</div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Technical Information -->
+                <div class="tech-info">
+                    <h3 class="tech-title">
+                        <span>🔧</span>
+                        Technische Informationen
+                    </h3>
+                    <ul class="tech-list">
+                        <li><strong>Fehler-Code:</strong> HTTP 404 - Not Found</li>
+                        <li><strong>Zeitstempel:</strong> <span id="currentTimestamp"></span></li>
+                        <li><strong>IP-Protokoll:</strong> IPv4/IPv6 kompatibel</li>
+                        <li><strong>Browser-Unterstützung:</strong> Alle modernen Browser</li>
+                        <li><strong>Cache-Status:</strong> Dynamic Content (nicht gecached)</li>
+                    </ul>
+                    <p style="margin-top: 15px; color: #666; font-size: 0.9rem; text-align: center;">
+                        Wenn Sie glauben, dass dies ein Fehler auf unserer Seite ist, 
+                        <a href="/kontakt" style="color: #ff9800; text-decoration: none;">kontaktieren Sie uns bitte</a> 
+                        mit der fehlerhaften URL.
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <a href="/" class="footer-logo">Sonnenspiele Casino</a>
+                <p style="color: #ccc; margin-bottom: 20px;">
+                    Unabhängige Bewertungen und Erfahrungen zum Sonnenspiele Online Casino für deutsche Spieler.
+                </p>
+                
+                <div class="footer-bottom">
+                    <p>© 2026 Sonnenspiele Casino Erfahrungen. Alle Rechte vorbehalten.</p>
+                    <p style="margin: 10px 0;">Glücksspiel kann süchtig machen. Hilfe unter: 
+                        <a href="https://www.bzga.de" style="color: #ff9800; text-decoration: none;" rel="nofollow noopener noreferrer">BZgA</a> | 
+                        <a href="https://www.spielen-mit-verantwortung.de" style="color: #ff9800; text-decoration: none;" rel="nofollow noopener noreferrer">Spielen mit Verantwortung</a>
+                    </p>
+                    <p>Diese Seite enthält Affiliate-Links. Durch einen Klick können wir eine Provision erhalten.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Error Message Container -->
+    <div class="error-message" id="errorAlert"></div>
+
+    <script>
+        // Set current timestamp
+        document.getElementById('currentTimestamp').textContent = new Date().toLocaleString('de-DE', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        });
+
+        // Search form submission
+        document.getElementById('siteSearch').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const query = document.getElementById('searchQuery').value.trim();
+            
+            if (!query) {
+                showError('Bitte geben Sie einen Suchbegriff ein');
+                return;
+            }
+            
+            // Simple search logic
+            const searchTerms = query.toLowerCase();
+            let redirectUrl = '/';
+            
+            if (searchTerms.includes('bonus') || searchTerms.includes('freispiel')) {
+                redirectUrl = '/bonus-ohne-einzahlung';
+            } else if (searchTerms.includes('5 euro') || searchTerms.includes('5€')) {
+                redirectUrl = '/5-euro-bonus';
+            } else if (searchTerms.includes('spiel') || searchTerms.includes('slot')) {
+                redirectUrl = '/spiele';
+            } else if (searchTerms.includes('erfahrung') || searchTerms.includes('bewertung')) {
+                redirectUrl = '/erfahrungen';
+            } else if (searchTerms.includes('login') || searchTerms.includes('anmeldung')) {
+                redirectUrl = '/login';
+            } else if (searchTerms.includes('kontakt') || searchTerms.includes('impressum')) {
+                redirectUrl = '/kontakt';
+            }
+            
+            // Show loading message
+            const searchButton = this.querySelector('.search-button');
+            const originalText = searchButton.textContent;
+            searchButton.textContent = 'Suche...';
+            searchButton.disabled = true;
+            
+            // Simulate search delay
+            setTimeout(() => {
+                window.location.href = redirectUrl + '?q=' + encodeURIComponent(query);
+            }, 800);
+        });
+
+        // Show error message function
+        function showError(message) {
+            const errorAlert = document.getElementById('errorAlert');
+            errorAlert.textContent = message;
+            errorAlert.style.display = 'block';
+            
+            setTimeout(() => {
+                errorAlert.style.display = 'none';
+            }, 5000);
+        }
+
+        // Check URL for clues about what the user was looking for
+        const currentPath = window.location.pathname;
+        const brokenUrl = currentPath.split('/').pop();
+        
+        if (brokenUrl && brokenUrl !== '404') {
+            console.log('User tried to access:', brokenUrl);
+            
+            // Analytics tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('event', '404_error', {
+                    'event_category': 'Error',
+                    'event_label': brokenUrl,
+                    'non_interaction': true
+                });
+            }
+        }
+
+        // Add keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            // Focus search input on Ctrl+F or Cmd+F
+            if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
+                e.preventDefault();
+                document.getElementById('searchQuery').focus();
+            }
+            
+            // Escape key closes error message
+            if (e.key === 'Escape') {
+                document.getElementById('errorAlert').style.display = 'none';
+            }
+            
+            // Enter key in search input triggers search
+            if (e.key === 'Enter' && document.activeElement.id === 'searchQuery') {
+                document.getElementById('siteSearch').dispatchEvent(new Event('submit'));
+            }
+        });
+
+        // Add auto-suggest for search
+        const searchInput = document.getElementById('searchQuery');
+        const suggestions = [
+            'Bonus ohne Einzahlung',
+            '5 Euro Bonus',
+            'Sonnenspiele Casino Login',
+            'Live Casino Spiele',
+            'Sicherheit und Lizenz',
+            'Auszahlungsdauer',
+            'Mobile App',
+            'Willkommensbonus',
+            'Spielautomaten',
+            'Blackjack Strategie'
+        ];
+        
+        let suggestionIndex = 0;
+        
+        function rotateSuggestion() {
+            searchInput.placeholder = `z.B. "${suggestions[suggestionIndex]}"...`;
+            suggestionIndex = (suggestionIndex + 1) % suggestions.length;
+        }
+        
+        // Rotate suggestions every 5 seconds
+        rotateSuggestion();
+        setInterval(rotateSuggestion, 5000);
+
+        // Add click tracking for popular pages
+        document.querySelectorAll('.page-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const pageName = this.querySelector('.page-name').textContent;
+                
+                // Track in analytics if available
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', '404_page_click', {
+                        'event_category': 'Navigation',
+                        'event_label': pageName,
+                        'transport_type': 'beacon'
+                    });
+                }
+            });
+        });
+
+        // Force center alignment on load
+        window.addEventListener('load', function() {
+            document.body.style.display = 'flex';
+            document.body.style.flexDirection = 'column';
+            document.body.style.alignItems = 'center';
+            document.body.style.justifyContent = 'flex-start';
+            
+            // Ensure no horizontal overflow
+            const checkOverflow = () => {
+                const bodyWidth = document.body.scrollWidth;
+                const viewportWidth = window.innerWidth;
+                
+                if (bodyWidth > viewportWidth) {
+                    console.warn('Horizontal overflow detected!');
+                    document.querySelectorAll('*').forEach(el => {
+                        if (el.scrollWidth > viewportWidth) {
+                            el.style.maxWidth = '100%';
+                            el.style.overflowX = 'hidden';
+                        }
+                    });
+                }
+            };
+            
+            checkOverflow();
+            window.addEventListener('resize', checkOverflow);
+        });
+
+        // Center fix for all elements
+        document.querySelectorAll('.search-box, .tech-info, .pages-grid').forEach(el => {
+            el.style.marginLeft = 'auto';
+            el.style.marginRight = 'auto';
+        });
+
+        // Log 404 error to console
+        console.log(
+            '%c🔍 404 - Seite nicht gefunden',
+            'color: #ff9800; font-size: 16px; font-weight: bold;'
+        );
+        console.log(
+            '%cDie gesuchte Seite konnte nicht gefunden werden.',
+            'color: #666; line-height: 1.5;'
+        );
+    </script>
+</body>
+</html>
